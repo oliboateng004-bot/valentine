@@ -1,0 +1,130 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    font-family: 'Segoe UI', sans-serif;
+    color: #333;
+}
+
+/* Main card */
+.container {
+    max-width: 600px;
+    margin: 40px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+h1 {
+    color: #e63946;
+}
+
+h2 span {
+    color: #e63946;
+}
+
+.message {
+    line-height: 1.6;
+    margin: 20px 0;
+}
+
+/* Countdown */
+#countdown {
+    font-weight: bold;
+    color: #e63946;
+}
+
+/* Gallery */
+.gallery {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.gallery img {
+    width: 45%;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+/* Song button */
+.song {
+    display: inline-block;
+    margin: 15px 0;
+    padding: 10px 20px;
+    background: #e63946;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+}
+
+/* Reasons */
+.reasons {
+    text-align: left;
+    margin-top: 20px;
+}
+
+/* Popup */
+.popup-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background: #ff4d6d;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+}
+
+.popup-content {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    max-width: 300px;
+    margin: 40vh auto;
+}
+
+/* Footer */
+.footer {
+    margin-top: 25px;
+    font-size: 14px;
+}
+
+/* Floating hearts */
+.hearts {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+}
+
+.heart {
+    position: absolute;
+    bottom: -20px;
+    font-size: 20px;
+    animation: floatUp 6s linear infinite;
+}
+
+@keyframes floatUp {
+    from { transform: translateY(0); opacity: 1; }
+    to { transform: translateY(-120vh); opacity: 0; }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .gallery {
+        flex-direction: column;
+    }
+    .gallery img {
+        width: 100%;
+    }
+}
